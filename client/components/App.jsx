@@ -19,9 +19,9 @@ const App = () => {
         <CoachList />
       </div>
       <div className='line'></div>
-      {/* <div className='container'>
+      <div className='container'>
         <Calendar/>
-      </div> */}
+      </div>
       <Footer />
     </div>
   )
