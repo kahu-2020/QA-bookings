@@ -4,11 +4,22 @@ body {
 }
 
 header{
+    border: azure solid;
     font-size: 35px;
     margin: 35px;
+    margin-bottom: 5px;
     padding: 40px;
     text-align: center;
     color: azure;
+}
+
+.line{
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 5px solid #ccc;
+    margin: 2em 6%;
+    padding: 1;
 }
 
 .container{
@@ -17,24 +28,22 @@ header{
     flex-flow: row wrap;
 }
 
-
 .coach {
     width: 250px;
     height: 250px;
-    background-color: rgb(30, 109, 255);
+    background-color: rgb(0, 118, 122);
     border-top-left-radius: 30%;
     border-top-right-radius: 30%;
     border-bottom-left-radius: 30%;
     border-bottom-right-radius: 30%;
     padding: 40px;
-    margin: 35px;
+    margin: 40px;
     color: azure;
     box-shadow: 10px 10px 15px rgb(0, 41, 43),
                 10px 10px 15px rgb(0, 61, 63),
                 10px 10px 15px rgb(0, 87, 90),
-                inset 1px 1px 15px 1px rgb(106, 176, 255),
-                inset 1px 1px 15px 1px rgb(49, 145, 255),
-                inset 5px 3px 15px 1px rgb(0, 119, 255);
+                inset 1px 1px 15px 15px rgb(255, 255, 255),
+                inset 1px 1px 15px 15px rgb(255, 255, 255);
 }
 
 .coach h3 {
@@ -62,7 +71,7 @@ footer{
     border-bottom-left-radius: 1%;
     border-bottom-right-radius: 1%;
     padding: 20px;
-    margin: 100px;
+    margin: 60px;
     color: rgb(0, 118, 122);
     box-shadow: 10px 10px 15px rgb(0, 41, 43),
                 10px 10px 15px rgb(0, 61, 63),
@@ -70,4 +79,35 @@ footer{
                 inset 1px 1px 15px 1px rgb(168, 168, 168),
                 inset 1px 1px 15px 1px rgb(109, 109, 109),
                 inset 5px 3px 15px 1px rgb(255, 255, 255);
+}
+
+.nav {
+    display: flex;
+    flex-flow: row wrap;
+    width: 92%;
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 80px;
+    background-color: #333;
+    align-items: center;
+    justify-content: center;
+}
+  
+.nav p {
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+  
+.nav p a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 20px 100px;
+}
+
+.nav p a:hover {
+    background-color: rgb(0, 118, 122);
 }
