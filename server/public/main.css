@@ -1,0 +1,73 @@
+body {
+    background-color: rgb(0, 118, 122);
+    font-family: 'Libre Baskerville', serif;
+}
+
+header{
+    font-size: 35px;
+    margin: 35px;
+    padding: 40px;
+    text-align: center;
+    color: azure;
+}
+
+.container{
+    justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.coach {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(30, 109, 255);
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    padding: 40px;
+    margin: 35px;
+    color: azure;
+    box-shadow: 10px 10px 15px rgb(0, 41, 43),
+                10px 10px 15px rgb(0, 61, 63),
+                10px 10px 15px rgb(0, 87, 90),
+                inset 1px 1px 15px 1px rgb(106, 176, 255),
+                inset 1px 1px 15px 1px rgb(49, 145, 255),
+                inset 5px 3px 15px 1px rgb(0, 119, 255);
+}
+
+.coach h3 {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;  
+    font-size: 20px;
+}
+
+footer{
+    font-size: 20px;
+    margin: 35px;
+    padding: 40px;
+    text-align: center;
+    color: azure;
+}
+
+.calendar{
+    text-align: center;
+    width: 1200px;
+    height: 800px;
+    background-color: azure;
+    border-top-left-radius: 1%;
+    border-top-right-radius: 1%;
+    border-bottom-left-radius: 1%;
+    border-bottom-right-radius: 1%;
+    padding: 20px;
+    margin: 100px;
+    color: rgb(0, 118, 122);
+    box-shadow: 10px 10px 15px rgb(0, 41, 43),
+                10px 10px 15px rgb(0, 61, 63),
+                10px 10px 15px rgb(0, 87, 90),
+                inset 1px 1px 15px 1px rgb(168, 168, 168),
+                inset 1px 1px 15px 1px rgb(109, 109, 109),
+                inset 5px 3px 15px 1px rgb(255, 255, 255);
+}
