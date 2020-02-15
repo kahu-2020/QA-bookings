@@ -12,7 +12,7 @@ class CoachList extends React.Component {
         return (
             <div className='centerCoach'>
                 <button className='coach'>
-                    <h3>COACH NAME}</h3>
+                    <h3>COACH NAME</h3>
                     {/* <h3>{this.props.coach.map( coach => {
                         return coach.first_name
                     })}</h3> */}
