@@ -103,11 +103,11 @@ footer{
   
 .nav p a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 118, 122);
     text-align: center;
     padding: 20px 100px;
 }
 
 .nav p a:hover {
-    background-color: rgb(0, 118, 122);
+    background-color: white;
 }
