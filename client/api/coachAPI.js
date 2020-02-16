@@ -5,8 +5,9 @@ import {getCoach} from '../actions/index'
 
 export function returnCoach() {
     return (dispatch) => {
-      request.get('/api/v1/')// check this route
-        .then(res => res.body)
+      request.get('/api/v1/')
+        .then(res => 
+          res.body)
         .then(coachArr => {
           dispatch(getCoach(coachArr))
           console.log(coachArr)

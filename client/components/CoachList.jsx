@@ -6,16 +6,22 @@ class CoachList extends React.Component {
 
     componentDidMount() {
         this.props.dispatch(returnCoach())
+        console.log('2')
+        console.log(this.props)
     }
 
     render() {
+
+        console.log('1')
+        console.log(this.props)
+
         return (
             <div className='centerCoach'>
                 <button className='coach'>
                     <h3>COACH NAME</h3>
-                    {/* <h3>{this.props.coach.map( coach => {
-                        return coach.first_name
-                    })}</h3> */}
+                    <h3>{this.props.coachArr.map( coach => {
+                        return <li>{coach}</li>
+                    })}</h3>
                 </button>
             </div>
         )
@@ -24,7 +30,7 @@ class CoachList extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        coach: state.coach
+        coachObj: state.coach
     }
 }
 

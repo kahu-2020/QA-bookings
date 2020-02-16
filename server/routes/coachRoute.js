@@ -7,9 +7,13 @@ router.use(express.json())
 
 router.get('/', (req, res) => {
     db.getCoach()
-    .then(id => {
-        res.json(id)
-    })
+        .then(id => {
+            res.json(id)
+        })
+        .catch(err => {
+            console.error(err)
+            res.status(500).json({ message: 'Something is broken' })
+        })
 })
 
 // router.post('/coach', (req, res) => {

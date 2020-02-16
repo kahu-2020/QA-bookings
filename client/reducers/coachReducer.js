@@ -6,7 +6,7 @@ const initialState = []
 function coachReducer (state = initialState, action) {
     switch(action.type) {
         case GOT_COACH:
-            return action.coach
+            return action.coachObj
         default:
             return state
     }
