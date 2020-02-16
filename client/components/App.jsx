@@ -14,6 +14,9 @@ const App = () => {
       </div>
       <div className='container'>
         <CoachList />
+        <CoachList />
+        <CoachList />
+        <CoachList />
       </div>
       <div className='line'></div>
       <div className='container'>
