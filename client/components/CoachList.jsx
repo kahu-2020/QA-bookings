@@ -5,11 +5,19 @@ import Coach from './Coach'
 
 class CoachList extends React.Component {
 
+    constructor(props){
+        super(props)
+
+    }
+
     componentDidMount() {
         this.props.dispatch(returnCoach())
     }
 
     render() {
+
+        console.log(this.props)
+
         return (
             <div className='centerCoach'>
                 <button className='coach'>
@@ -24,7 +32,7 @@ class CoachList extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        coach: state.coach
+        payload: state.coach
     }
 }
 

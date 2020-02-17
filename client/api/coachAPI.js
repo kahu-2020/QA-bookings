@@ -1,14 +1,20 @@
 
 import request from 'superagent'
 
-import {getCoach} from '../actions/index'
+import { receivedCoach, getCoaches, receiveCoachErr} from '../actions/index'
 
 export function returnCoach() {
-    return (dispatch) => {
-      request.get('/api/v1/')// check this route
-        .then(res => res.body)
-        .then(coachArr => {
-          dispatch(getCoach(coachArr))
-        })
-    }
+  return (dispatch) => {
+    dispatch(getCoaches())
+    return request
+      .get('/api/v1/')
+      .then(res =>
+        res.body)
+      .then(coachArr => {
+        dispatch(receivedCoach(coachArr))
+      })
+      .catch(err => {
+        dispatch(receiveCoachErr(err))
+      })
   }
+}
