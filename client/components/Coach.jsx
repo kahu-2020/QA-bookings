@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Coach = () => {
+const Coach = (props) => {
+    console.log(props)
     return (
-        <div></div>
+        <h3>{props.coach.first_name} {props.coach.last_name}</h3>
     )
 }
 

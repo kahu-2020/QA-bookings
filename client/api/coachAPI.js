@@ -12,7 +12,6 @@ export function returnCoach() {
         res.body)
       .then(coachArr => {
         dispatch(receivedCoach(coachArr))
-        console.log(coachArr)
       })
       .catch(err => {
         dispatch(receiveCoachErr(err))

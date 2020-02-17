@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { returnCoach } from '../api/coachAPI'
+import Coach from './Coach'
 
 class CoachList extends React.Component {
 
@@ -20,7 +21,9 @@ class CoachList extends React.Component {
         return (
             <div className='centerCoach'>
                 <button className='coach'>
-                    <h3>COACH NAME</h3>
+                    <h3>{this.props.coach.map((coach) => {
+                        return <ul key={coach.id}><Coach coach={coach} /></ul>
+                    })}</h3>
                 </button>
             </div>
         )
