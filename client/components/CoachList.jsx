@@ -11,21 +11,16 @@ class CoachList extends React.Component {
 
     render() {
 
-        const coaches = this.props.coach[0]
-
-        console.log(coaches)
-
         return (
-            <div className='container'>
+            <div className='centerCoach'>
                 {this.props.coach.map((coach, id) => {
-                    return  <div className='centerCoach'>
+                    return  <>
                                 {coach.map(coach => {
-                                    return  <button className='coach'>
+                                    return  <button className='coach' key={id}>
                                                 <h3>{coach.first_name} {coach.last_name}</h3>
-                                            </button>
-                                                     
+                                            </button>          
                                 })}          
-                            </div>
+                            </>
                 })}
             </div>
         )

@@ -7,19 +7,20 @@ import Nav from './Nav'
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
       <div>
         <Nav />
       </div>
-      <CoachList />
-
+      <div>
+        <CoachList />
+      </div>
       <div className='line'></div>
       <div className='container'>
         <Calendar/>
       </div>
       <Footer />
-    </div>
+    </>
   )
 }
 
