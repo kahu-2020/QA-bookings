@@ -1,25 +1,43 @@
 
-export const GOT_COACH = 'GOT_COACH'
-export const ERROR_COACH = 'ERROR_COACH'
-export const GET_COACHES = 'GET_COACHES'
+export const RECEIVED_COACH = 'RECEIVED_COACH'
+export const ERROR = 'ERROR'
+export const GET_COACH = 'GET_COACH'
 
-export const getCoaches = () => {
+import request from 'superagent'
+
+export const getCoach = () => {
     return {
-        type: GET_COACHES 
+        type: GET_COACH
     }
 }
 
 export const receivedCoach = (coach) => {
     return {
-        type: GOT_COACH,
-        payload: coach
+        type: RECEIVED_COACH,
+        coach: coach
     }
 }
 
-export const receiveCoachErr = () => {
+export const receiveErr = (error) => {
     return {
-        type: ERROR_COACH,
-        payload: error
+        type: ERROR,
+        coach: error
     }
 }
+
+export function returnCoach() {
+    return (dispatch) => {
+      dispatch(getCoach())
+      return request
+        .get('/api/v1/')// check this route
+        .then(res => res.body)
+        .then(coachArr => {
+          dispatch(receivedCoach(coachArr))
+          console.log(coachArr)
+        })
+        .catch(err => {
+          dispatch(receiveErr(err))
+        })
+    }
+  }
 

@@ -41,6 +41,7 @@ header{
 }
 
 .coach {
+    
     outline: none;
     width: 250px;
     height: 250px;
@@ -59,48 +60,22 @@ header{
                 inset 1px 1px 4px 4px rgb(255, 255, 255);
 }
 
-.coach span{
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-.coach h3 {
-    text-align: center;
-    vertical-align: middle;
-    line-height: 100px;  
-    font-size: 20px;
-}
-
 .coach :hover {
-    background-color: rgb(0, 174, 255, 0.5);
+    background-color: rgba(225, 0, 255, 0.5);
     border-radius: 10px;
-    padding: 10px;
+    padding: 30px;
 }
 
-.coach span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-  
-.coach:hover span {
-    padding-right: 25px;
-}
-  
-.coach:hover span:after {
-    opacity: 1;
-    right: 0;
+.centerCoach {
+    justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 footer{
     font-size: 20px;
     margin: 35px;
-    padding: 40px;
+    padding: 60px;
     text-align: center;
     color: azure;
 }
@@ -163,6 +138,6 @@ footer{
 }
 
 .nav p a:hover {
-    background-color: rgb(0, 174, 255, 0.5);
+    background-color: rgb(225, 0, 255, 0.5);
     border-radius: 10px;
 }

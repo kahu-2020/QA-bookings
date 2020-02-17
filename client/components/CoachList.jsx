@@ -1,14 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { returnCoach } from '../api/coachAPI'
-import Coach from './Coach'
+import { returnCoach } from '../actions/index'
+
 
 class CoachList extends React.Component {
-
-    constructor(props){
-        super(props)
-
-    }
 
     componentDidMount() {
         this.props.dispatch(returnCoach())
@@ -16,15 +11,22 @@ class CoachList extends React.Component {
 
     render() {
 
-        console.log(this.props)
+        const coaches = this.props.coach[0]
+
+        console.log(coaches)
 
         return (
-            <div className='centerCoach'>
-                <button className='coach'>
-                    <h3>{this.props.coach.map((coach) => {
-                        return <ul key={coach.id}><Coach coach={coach} /></ul>
-                    })}</h3>
-                </button>
+            <div className='container'>
+                {this.props.coach.map((coach, id) => {
+                    return  <div className='centerCoach'>
+                                {coach.map(coach => {
+                                    return  <button className='coach'>
+                                                <h3>{coach.first_name} {coach.last_name}</h3>
+                                            </button>
+                                                     
+                                })}          
+                            </div>
+                })}
             </div>
         )
     }
@@ -32,7 +34,7 @@ class CoachList extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        payload: state.coach
+        coach: state.coach
     }
 }
 

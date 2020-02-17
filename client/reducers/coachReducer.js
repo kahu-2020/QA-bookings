@@ -1,16 +1,16 @@
 
-import { GOT_COACH, GET_COACHES, ERROR_COACH} from '../actions/index'
+import { RECEIVED_COACH, GET_COACH, ERROR } from '../actions/index'
 
 const initialState = []
 
 function coachReducer (state = initialState, action) {
     switch(action.type) {
-        case GET_COACHES:
+        case GET_COACH:
             return state
-        case GOT_COACH:
-            return action.payload
-        case ERROR_COACH:
-            return action.payload
+        case RECEIVED_COACH:
+            return [...state, action.coach]
+        case ERROR:
+            return action.coach
         default:
             return state
     }

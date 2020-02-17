@@ -12,9 +12,8 @@ const App = () => {
       <div>
         <Nav />
       </div>
-      <div className='container'>
-        <CoachList />
-      </div>
+      <CoachList />
+
       <div className='line'></div>
       <div className='container'>
         <Calendar/>
