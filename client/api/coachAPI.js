@@ -9,7 +9,6 @@ export function returnCoach() {
         .then(res => res.body)
         .then(coachArr => {
           dispatch(getCoach(coachArr))
-          console.log(coachArr)
         })
     }
   }

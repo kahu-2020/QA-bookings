@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 
-import coachReducer from './coachReducer'
+import coach from './coachReducer'
 
 export default combineReducers({
-    coachReducer    
+    coach    
 })
