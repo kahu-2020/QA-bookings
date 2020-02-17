@@ -1,23 +1,35 @@
+@keyframes backgroundColor {
+    from {background-color: rgb(3, 152, 238);}
+    to {background-color: rgb(60, 236, 212);}
+}
+
 body {
-    background-color: rgb(0, 118, 122);
-    font-family: 'Libre Baskerville', serif;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0 0.295), rgb(255, 255, 255) 10%)url(./Logo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    animation-name: backgroundColor;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 
 header{
-    border: azure solid;
+    border: rgb(0, 0, 0) solid;
     font-size: 35px;
     margin: 35px;
     margin-bottom: 5px;
     padding: 40px;
     text-align: center;
-    color: azure;
+    color: rgb(0, 0, 0);
 }
 
 .line{
     display: block;
     height: 2px;
     border: 0;
-    border-top: 5px solid #ccc;
+    border-top: 5px solid rgba(0, 0, 0, 0.6);
     margin: 2em 6%;
     padding: 1;
 }
@@ -29,21 +41,29 @@ header{
 }
 
 .coach {
+    outline: none;
     width: 250px;
     height: 250px;
-    background-color: rgb(0, 118, 122);
-    border-top-left-radius: 30%;
-    border-top-right-radius: 30%;
-    border-bottom-left-radius: 30%;
-    border-bottom-right-radius: 30%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
     padding: 40px;
     margin: 40px;
-    color: azure;
-    box-shadow: 10px 10px 15px rgb(0, 41, 43),
-                10px 10px 15px rgb(0, 61, 63),
-                10px 10px 15px rgb(0, 87, 90),
-                inset 1px 1px 15px 15px rgb(255, 255, 255),
-                inset 1px 1px 15px 15px rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 10px rgb(0, 41, 43),
+                1px 1px 10px rgb(0, 61, 63),
+                1px 1px 10px rgb(0, 87, 90),
+                inset 1px 1px 4px 4px rgb(255, 255, 255),
+                inset 1px 1px 4px 4px rgb(255, 255, 255);
+}
+
+.coach span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
 }
 
 .coach h3 {
@@ -51,6 +71,30 @@ header{
     vertical-align: middle;
     line-height: 100px;  
     font-size: 20px;
+}
+
+.coach :hover {
+    background-color: rgb(0, 174, 255, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.coach span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.coach:hover span {
+    padding-right: 25px;
+}
+  
+.coach:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 footer{
@@ -65,32 +109,42 @@ footer{
     text-align: center;
     width: 1200px;
     height: 800px;
-    background-color: azure;
+    background-color: rgba(255, 255, 255, 0.5);
     border-top-left-radius: 1%;
     border-top-right-radius: 1%;
     border-bottom-left-radius: 1%;
     border-bottom-right-radius: 1%;
     padding: 20px;
     margin: 60px;
-    color: rgb(0, 118, 122);
-    box-shadow: 10px 10px 15px rgb(0, 41, 43),
-                10px 10px 15px rgb(0, 61, 63),
-                10px 10px 15px rgb(0, 87, 90),
-                inset 1px 1px 15px 1px rgb(168, 168, 168),
-                inset 1px 1px 15px 1px rgb(109, 109, 109),
-                inset 5px 3px 15px 1px rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 10px rgb(0, 41, 43),
+    1px 1px 10px rgb(0, 61, 63),
+    1px 1px 10px rgb(0, 87, 90),
+    inset 1px 1px 6px 6px rgb(255, 255, 255),
+    inset 1px 1px 8px 8px rgb(255, 255, 255);
 }
 
 .nav {
+    border-color: rgb(2, 2, 2);
+    border-radius: 10px;
     display: flex;
     flex-flow: row wrap;
+    height: 100px;
     width: 92%;
     margin: auto;
-    margin-top: 24px;
+    margin-top: 80px;
     margin-bottom: 80px;
-    background-color: #333;
+    background-color: rgb(255, 255, 255, 0.5);
     align-items: center;
     justify-content: center;
+    font-size: 20px;
+    box-shadow: 1px 1px 10px rgb(0, 41, 43),
+    1px 1px 10px rgb(0, 61, 63),
+    1px 1px 10px rgb(0, 87, 90),
+    inset 1px 1px 6px 6px rgb(255, 255, 255),
+    inset 1px 1px 8px 8px rgb(255, 255, 255);
+    transition-delay: 0.2s !important;
+    overflow: hidden;
 }
   
 .nav p {
@@ -103,11 +157,12 @@ footer{
   
 .nav p a {
     text-decoration: none;
-    color: rgb(0, 118, 122);
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px 100px;
 }
 
 .nav p a:hover {
-    background-color: white;
+    background-color: rgb(0, 174, 255, 0.5);
+    border-radius: 10px;
 }
