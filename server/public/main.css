@@ -1,6 +1,8 @@
 @keyframes backgroundColor {
     from {background-color: rgb(3, 152, 238);}
     to {background-color: rgb(60, 236, 212);}
+    to {background-color: rgb(186, 238, 43);}
+    to {background-color: rgb(107, 250, 107);}
 }
 
 body {
@@ -44,7 +46,6 @@ header{
 }
 
 .coach {
-    
     outline: none;
     width: 250px;
     height: 250px;
@@ -85,6 +86,15 @@ footer{
     color: azure;
 }
 
+.welcome{
+    justify-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+    border: rgb(0, 0, 0) solid;
+    padding: 40px;
+    margin: 35px;
+}
+
 .calendar{
     text-align: center;
     width: 1200px;
@@ -105,6 +115,8 @@ footer{
 }
 
 .nav {
+    display: flex;
+    flex-flow: row wrap;
     border-color: rgb(2, 2, 2);
     border-radius: 10px;
     display: flex;
@@ -138,7 +150,7 @@ footer{
     text-decoration: none;
     color: rgb(0, 0, 0);
     text-align: center;
-    padding: 20px 80px;
+    padding: 20px 20px;
 }
 
 .nav p a:hover {

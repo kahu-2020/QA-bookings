@@ -3,16 +3,22 @@ import Header from './Header'
 import CoachList from './CoachList'
 import Calendar from './Calendar'
 import Footer from './Footer'
-import Nav from './Nav'
+import Welcome from './Welcome'
 
 const App = () => {
   return (
     <>
       <Header />
       <div>
+        <Welcome/>
+      </div>
+      <div>
         <CoachList />
       </div>
       <div className='line'></div>
+      <div>
+
+      </div>
       <div className='container'>
         <Calendar/>
       </div>
