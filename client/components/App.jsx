@@ -10,9 +10,6 @@ const App = () => {
     <>
       <Header />
       <div>
-        <Nav />
-      </div>
-      <div>
         <CoachList />
       </div>
       <div className='line'></div>

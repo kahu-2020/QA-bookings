@@ -37,6 +37,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "knex": "^0.20.9",
+    "moment": "^2.24.0",
     "react-router-dom": "^5.1.2",
     "sqlite3": "^4.1.1"
   },

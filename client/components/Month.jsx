@@ -1,11 +1,23 @@
 import React from 'react'
+import moment from 'moment'
 
-const Month = () => {
-    return (
-        <div>
+class Month extends React.Component{
 
-        </div>
-    )
+    state = {
+        day: '',
+        timeSlot: 0
+    }
+
+    render() {
+        
+        const time = moment().format('MMMM YYYY').toString().toUpperCase()
+
+        return (
+            <div>
+                <h3>{time}</h3>
+            </div>
+        )
+    }
 }
 
 export default Month

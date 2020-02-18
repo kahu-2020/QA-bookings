@@ -17,7 +17,7 @@ class CoachList extends React.Component {
                     return  <>
                                 {coach.map(coach => {
                                     return  <button className='coach' key={id}>
-                                                <h3>{coach.first_name} {coach.last_name}</h3>
+                                                <h3>{coach.first_name}</h3>
                                             </button>          
                                 })}          
                             </>

@@ -4,8 +4,10 @@ const Nav = () => {
     return (
         <div className='nav'>
             <p><a href="default.asp">HOME</a></p>
+            <p><a href="">COACH</a></p>
             <p><a href="contact.asp">CONTACT</a></p>
             <p><a href="about.asp">ABOUT</a></p>
+
         </div>
     )
 }

@@ -1,20 +1,21 @@
 import React from 'react'
-import Month from './Month'
+import moment from 'moment'
 
 class Calendar extends React.Component{
 
     state = {
         year: 0,
         month: '',
-        day: 0,
-        hour: 0,
     }
 
-    render() {
+    render() {  
+        
         return (
             <div className='calendar'>
                 <h1>COACH CALENDAR</h1>
-                <Month />
+                <div>
+                
+                </div>
             </div>
         )
     }
